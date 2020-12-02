@@ -1,14 +1,29 @@
 import React from 'react';
 
-function Potato(){
-  return <h3>I love potate</h3>;
+function Food({fav, picture}){
+  return (
+    <div>
+      <h3>I love {fav}</h3>
+      <img src={picture}></img>
+    </div>
+  );
 }
+
+const foodILike = [
+  {
+    name:"kimchi",
+    image:"https://www.maangchi.com/wp-content/uploads/2019/11/vegankimchi-insta.jpg"
+  },
+  {
+    name:"samgyupsal",
+    image:"https://newsimg.hankookilbo.com/cms/articlerelease/2020/06/11/202006111362061920_7.jpg"
+  }
+];
 
 function App() {
   return (
     <div>
-      <h1>hello</h1>
-      <Potato/>
+      {foodILike.map(food => <Food fav={food.name} picture={food.image}/>)}
     </div>
   );
 }
