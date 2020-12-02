@@ -7,8 +7,21 @@ class App extends React.Component{
     count:0
   };
 
+  add = () => {
+    console.log("add")
+  };
+  minus = () => {
+    console.log("minus");
+  };
+
   render(){
-    return <h1>I am a class Component</h1>; 
+  return (
+    <div>
+      <h1>The number is: {this.state.count}</h1>
+      <button onClick={this.add}>Add</button>
+      <button onClick={this.minus}>Minus</button>
+    </div>
+  ); 
   }
 }
 
