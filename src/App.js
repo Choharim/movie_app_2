@@ -20,10 +20,15 @@ const foodILike = [
   }
 ];
 
+function renderFood(food){
+  return (
+    <Food fav={food.name} picture={food.image}/>
+  );
+}
 function App() {
   return (
     <div>
-      {foodILike.map(food => <Food fav={food.name} picture={food.image}/>)}
+      {foodILike.map(renderFood)}
     </div>
   );
 }
