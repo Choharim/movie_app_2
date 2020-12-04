@@ -13,7 +13,7 @@ function App(){
       <Navigation></Navigation>
       <Route path="/" exact={true} component={Home}></Route>
       <Route paht="/about" component={About}></Route>
-      <Route path="/movie_detail" component={Detail}></Route>
+      <Route path="/movie/:id" component={Detail}></Route>
     </HashRouter>
   );
 }
